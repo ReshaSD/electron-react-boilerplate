@@ -2,7 +2,7 @@
   "name": "electron-react-boilerplate",
   "private": true,
   "scripts": {
-    "clean": "find ./ -type d -name \"node_modules\" -exec rm -rf {} \\; || exit 0",
+    "clean": "find ./ -type d -name \"node_modules\" -exec rm -rf {} \\; | rm -rf packages/app-desktop/src/dist | rm -rf packages/app-desktop/src/main.prod.js | exit 0",
     "reinitall": "yarn clean && yarn install",
     "desktop:start": "yarn workspace @app_name/desktop start",
     "desktop:build": "yarn workspace @app_name/desktop build",
