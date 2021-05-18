@@ -81,7 +81,7 @@
     "directories": {
       "app": "src",
       "buildResources": "assets",
-      "output": "release"
+      "output": "../../release"
     },
     "extraResources": [
       "./assets/**"
