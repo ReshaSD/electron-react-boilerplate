@@ -1,0 +1,26 @@
+{
+  "name": "electron-react-boilerplate",
+  "private": true,
+  "scripts": {
+    "clean": "find ./ -type d -name \"node_modules\" -exec rm -rf {} \\; || exit 0",
+    "reinitall": "yarn clean && yarn install",
+    "desktop:start": "yarn workspace @app_name/desktop start",
+    "desktop:build": "yarn workspace @app_name/desktop build",
+    "desktop:package": "yarn workspace @app_name/desktop package"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/app-desktop",
+      "packages/app-web",
+      "packages/components/*"
+    ],
+    "nohoist": [
+      "**/electron",
+      "**/electron/**",
+      "**/electron-*",
+      "**/electron-*/**",
+      "**/jest",
+      "**/jest/**"
+    ]
+  }
+}

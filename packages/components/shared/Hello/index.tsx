@@ -1,9 +1,11 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import icon from '../assets/icon.svg';
-import './App.global.css';
+import React, { FC } from 'react'
+import icon from './icon.svg'
 
-const Hello = () => {
+
+type THelloProps = {}
+
+
+export const Hello: FC<THelloProps> = (props) => {
   return (
     <div>
       <div className="Hello">
@@ -37,15 +39,5 @@ const Hello = () => {
         </a>
       </div>
     </div>
-  );
-};
-
-export default function App() {
-  return (
-    <Router>
-      <Switch>
-        <Route path="/" component={Hello} />
-      </Switch>
-    </Router>
-  );
+  )
 }
