@@ -20,7 +20,9 @@
       "**/electron-*",
       "**/electron-*/**",
       "**/jest",
-      "**/jest/**"
+      "**/jest/**",
+      "**/webpack-dev-server",
+      "**/webpack-dev-server/**"
     ]
   }
 }
