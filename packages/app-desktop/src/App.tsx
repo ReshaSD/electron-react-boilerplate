@@ -1,4 +1,4 @@
-import { Hello } from '@app_name/components/Hello'
+import { Hello } from '@app_name/common/Hello'
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.global.css';

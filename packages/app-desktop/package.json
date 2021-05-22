@@ -11,7 +11,7 @@
     "rebuild": "electron-rebuild --parallel --types prod,dev,optional --module-dir src",
     "lint": "cross-env NODE_ENV=development eslint . --cache --ext .js,.jsx,.ts,.tsx",
     "package": "rm -rf src/dist && yarn build && electron-builder build --publish never",
-    "postinstall": "node -r @babel/register .erb/scripts/CheckNativeDep.js && electron-builder install-app-deps && yarn cross-env NODE_ENV=development webpack --config ./.erb/configs/webpack.config.renderer.dev.dll.babel.js && opencollective-postinstall && yarn-deduplicate ../../yarn.lock",
+    "p-ostinstall": "node -r @babel/register .erb/scripts/CheckNativeDep.js && electron-builder install-app-deps && yarn cross-env NODE_ENV=development webpack --config ./.erb/configs/webpack.config.renderer.dev.dll.babel.js && opencollective-postinstall && yarn-deduplicate ../../yarn.lock",
     "start": "node -r @babel/register ./.erb/scripts/CheckPortInUse.js && yarn start:renderer",
     "start:main": "cross-env NODE_ENV=development electron -r ./.erb/scripts/BabelRegister ./src/main.dev.ts",
     "start:renderer": "cross-env NODE_ENV=development webpack serve --config ./.erb/configs/webpack.config.renderer.dev.babel.js",
@@ -162,6 +162,7 @@
     "@babel/plugin-proposal-json-strings": "^7.12.1",
     "@babel/plugin-proposal-logical-assignment-operators": "^7.12.1",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.12.1",
+    "@babel/plugin-proposal-numeric-separator": "^7.14.2",
     "@babel/plugin-proposal-optional-chaining": "^7.12.7",
     "@babel/plugin-proposal-pipeline-operator": "^7.12.1",
     "@babel/plugin-proposal-throw-expressions": "^7.12.1",
@@ -250,6 +251,7 @@
     "yarn-deduplicate": "^3.1.0"
   },
   "dependencies": {
+    "@app_name/common": "workspace:packages/common",
     "electron-debug": "^3.1.0",
     "electron-log": "^4.2.4",
     "electron-updater": "^4.3.4",

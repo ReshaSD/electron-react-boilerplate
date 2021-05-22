@@ -1,5 +1,5 @@
 {
-  "name": "@app_name/components",
+  "name": "@app_name/common-web",
   "version": "0.0.1",
   "private": true,
   "main": "index.ts",
