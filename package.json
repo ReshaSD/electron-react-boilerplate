@@ -2,16 +2,14 @@
   "name": "app_name",
   "private": true,
   "scripts": {
-    "clean": "find ./ -type d -name \"node_modules\" -exec rm -rf {} \\; | rm -rf packages/app-desktop/src/dist | rm -rf packages/app-desktop/src/main.prod.js | exit 0",
-    "r2einstall": "yarn clean && yarn install",
-    "reinstall": "yarn install",
-    "desktop:start": "yarn workspace @app_name/desktop start",
+    "clean": ".scripts/clean",
     "desktop:build": "yarn workspace @app_name/desktop build",
-    "desktop:package": "yarn workspace @app_name/desktop package",
     "desktop:test": "yarn workspace @app_name/desktop test",
+    "desktop:start": "yarn workspace @app_name/desktop start",
+    "desktop:package": "yarn workspace @app_name/desktop package",
+    "web:test": "yarn workspace @app_name/web test",
     "web:start": "yarn workspace @app_name/web start",
-    "web:build": "yarn workspace @app_name/web build",
-    "web:test": "yarn workspace @app_name/web test"
+    "web:build": "yarn workspace @app_name/web build"
   },
   "workspaces": {
     "packages": [

@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+cd ..
+
+# All `node_modules` folders
+find ./ -type d -name "node_modules" -exec rm -rf {} \;
+
+# Yarn
+rm -rf .yarn/cache
+rm -rf .yarn/build-state.yml
+rm -rf .yarn/install-state.gz
+rm -f yarn-error.log
+
+rm -rf packages/app-desktop/src/.yarn/cache
+rm -rf packages/app-desktop/src/.yarn/build-state.yml
+rm -rf packages/app-desktop/src/.yarn/install-state.gz
+rm -d packages/app-desktop/src/.yarn
+rm -f packages/app-desktop/src/yarn-error.log
+
+# Electron generated files
+rm -rf packages/app-desktop/.erb/dll
+rm -rf packages/app-desktop/src/dist
+rm -rf packages/app-desktop/src/main.prod.js
+
+# Electron releases
+
+rm -rf release/*-unpacked
+rm -rf release/builder-debug.yml
+rm -rf release/builder-effective-config.yaml
+
+# React Web
+rm -rf packages/app-web/build
