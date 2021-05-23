@@ -1,8 +1,6 @@
 {
   "extends": "../../tsconfig.base.json",
-  "typeAcquisition": {
-    "include": [
-      "../../@types"
-    ]
-  }
+  "include": [
+    "../../@types"
+  ]
 }
