@@ -7,7 +7,7 @@ module.exports = {
     alias: {},
     plugins: [],
     configure: (webpackConfig, { env, paths }) => {
-      console.log('webpackConfig', JSON.stringify(webpackConfig));
+      // console.log('webpackConfig', JSON.stringify(webpackConfig));
       const { isFound, match } = getLoader(
         webpackConfig,
         loaderByName('babel-loader'),
