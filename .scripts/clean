@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-cd ..
-
 # All `node_modules` folders
 find ./ -type d -name "node_modules" -exec rm -rf {} \;
 
