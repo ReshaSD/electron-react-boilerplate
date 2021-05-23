@@ -1,3 +1,4 @@
+import { Hello } from '@app_name/common'
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
