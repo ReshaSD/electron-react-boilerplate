@@ -1,0 +1,33 @@
+{
+  "name": "app",
+  "private": true,
+  "scripts": {
+    "postinstall": "yarn workspace @app/desktop post-install",
+    "desktop:build": "yarn workspace @app/desktop build",
+    "desktop:test": "yarn workspace @app/desktop test",
+    "desktop:start": "yarn workspace @app/desktop start",
+    "desktop:package": "yarn workspace @app/desktop package",
+    "desktop:lint": "yarn workspace @app/desktop lint --fix",
+    "web:test": "yarn workspace @app/web test",
+    "web:start": "yarn workspace @app/web start",
+    "web:build": "yarn workspace @app/web build",
+    "clean:all": "yarn clean && .scripts/clean",
+    "clean": "yarn workspaces foreach -A -p --exclude app run clean",
+    "compile": "yarn clean && yarn workspaces foreach -A -pt --exclude app run compile",
+    "compile:watch": "yarn clean && yarn workspaces foreach -A -pt --exclude app run compile:watch",
+    "shared:compile": "yarn workspace @app/shared compile"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/app-desktop",
+      "packages/app-web",
+      "packages/shared"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.8.1",
+    "@typescript-eslint/parser": "^4.8.1",
+    "eslint": "^7.5.0",
+    "typescript": "^4.2.4"
+  }
+}
