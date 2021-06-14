@@ -1,0 +1,6 @@
+# tsc
+/dist
+/tsconfig.tsbuildinfo
+
+
+/node_modules

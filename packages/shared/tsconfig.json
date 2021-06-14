@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "src",
+    "composite": true,
+    "declaration": true,
+    "isolatedModules": false,
+    "jsx": "preserve",
+    "noEmit": false,
+    "outDir": "dist",
+    "rootDir": "src",
+    "typeRoots": [
+      "../../@types",
+      "./node_modules/@types"
+    ]
+  },
+  "include": ["src/**/*"]
+}

@@ -15,6 +15,9 @@ import { app, BrowserWindow, shell } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
+import { testRegisterHandlers } from './main/testIpc';  // TODO: Investigate how to use '@app/main' without "SyntaxError: unexpected token 'export'" error
+
+testRegisterHandlers()
 
 export default class AppUpdater {
   constructor() {
